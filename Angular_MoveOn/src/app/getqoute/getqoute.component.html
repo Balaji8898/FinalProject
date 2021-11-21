@@ -1,0 +1,198 @@
+<body>
+    <div class="main">
+        <div class="right">
+            <div class="container">
+
+                <div class="title">Your Details</div>
+                <div class="content">
+                    <form [formGroup]="qoute" >
+
+
+                        <input type="text" style="color:rgb(255, 255, 255);font-size: 1px; border: 0px solid rgb(255, 255, 255);" 
+                        formControlName="applicationnumber" [(ngModel)]= "an"  />
+
+
+
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Moving From*</span>
+                                <input type="text" placeholder="Country" formControlName="movingfrom" class="form-control">
+                                <div *ngIf="mfrom.errors">
+                                    <b *ngIf="mfrom.touched && mfrom.errors.required"
+                                        style="color:lightcoral">*Required</b>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Moving Form*</span>
+                                <input type="text" placeholder="Pincode" formControlName="movingfrompincode">
+                                <div *ngIf="mfrompincode.errors">
+                                    <b *ngIf="mfrompincode.touched && mfrompincode.errors.required"
+                                        style="color:lightcoral">*Required</b>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Moving To*</span>
+                                <input type="text" placeholder="Country" formControlName="movingto">
+                                <div *ngIf="mto.errors">
+                                    <b *ngIf="mto.touched && mto.errors.required" style="color:lightcoral">*Required</b>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Moving To*</span>
+                                <input type="text" placeholder="Pincode" formControlName="movingtopincode">
+                                <div *ngIf="mtopincode.errors">
+                                    <b *ngIf="mtopincode.touched && mtopincode.errors.required"
+                                        style="color:lightcoral">*Required</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Where do you want to go?*</span>
+                                <select name="prodtype" id="prodtypeone" formControlName="wheredoyouwanttogo">
+                                    <div *ngIf="where.errors">
+                                        <b *ngIf="where.touched && where.errors.required"
+                                            style="color:lightcoral">*Required</b>
+                                    </div>
+                                    <option value="">--select--</option>
+                                    <option value="Domestic">Domestic</option>
+                                    <option value="International">International</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">What would you like to move?*</span>
+                                <select name="prodtype" id="prodtype" formControlName="whatwouldyouliketomove">
+                                    <div *ngIf="what.errors">
+                                        <b *ngIf="what.touched && what.errors.required"
+                                            style="color:lightcoral">*Required</b>
+                                    </div>
+                                    <option value="">--select--</option>
+                                    <option value="Complete Home">Complete Home</option>
+                                    <option value="Few Household Goods">Few Household Goods</option>
+                                    <option value="Complete Office">Complete Office</option>
+                                    <option value="Few Office Goods">Few Office Goods</option>
+                                    <option value="Not Sure">Not Sure</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Service Quality you are looking for?</span>
+                                <select name="prodtype" id="prodtype" formControlName="servicequality">
+                                    <option value="">--select--</option>
+                                    <option value="Economical-Regular Quality">Economical-Regular Quality</option>
+                                    <option value="Premium-Superior Quality">Premium-Superior Quality</option>
+                                </select>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Why are you moving?</span>
+                                <select name="reason" id="reason" formControlName="whyareyoumoving">
+                                    <option value="">--select--</option>
+                                    <option value="For Work">For Work</option>
+                                    <option value="To Study">To Study</option>
+                                    <option value="Family Reasons">Family Reasons</option>
+                                    <option value="To Retire">To Retire</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Additional Services</span>
+                                <select name="Vehi_type" id="Vehi_type" formControlName="additionalservices">
+                                    <option value="">--select--</option>
+                                    <option value="Immigration Services">Immigration Services</option>
+                                    <option value="Home Search">Home Search</option>
+                                    <option value="School Search">School Search</option>
+                                    <option value="Pet Relocation Services">Pet Relocation Services</option>
+                                    <option value="Not Required">Not Required</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Consultation*</span>
+                                <select name="Vehi_type" id="Vehi_type" formControlName="consultation">
+                                    <div *ngIf="consult.errors">
+                                        <b *ngIf="consult.touched && consult.errors.required"
+                                            style="color:lightcoral">*Required</b>
+                                    </div>
+                                    <option value="">--select--</option>
+                                    <option value="Virtual Consultations">Virtual Consultations</option>
+                                    <option value="Field Consultations"> Field Consultations</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Name*</span>
+                                <input type="text" placeholder="Your Name" formControlName="name">
+                                <div *ngIf="namee.errors">
+                                    <b *ngIf="namee.touched && namee.errors.required"
+                                        style="color:lightcoral">*Required</b>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Phone Number*</span>
+                                <input type="text" placeholder="Phone Number" formControlName="phonenumber">
+                                <div *ngIf="phone.errors">
+                                    <b *ngIf="phone.touched && phone.errors.required" style="color:lightcoral">*Enter a
+                                        valid phone number</b>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Email Address*</span>
+                                <input type="text" placeholder="Email id" formControlName="emailaddress">
+                                <div *ngIf="email.errors">
+                                    <b *ngIf="email.touched && email.errors.required" style="color:lightcoral">*Enter a
+                                        valid email id</b>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Current Address*</span>
+                                <input type="text" placeholder="Address" formControlName="currentaddress">
+                                <div *ngIf="address.errors">
+                                    <b *ngIf="address.touched && address.errors.required"
+                                        style="color:lightcoral">*Required</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Anything you want us to know?</span>
+                                <input type="text" placeholder="Feel free to say"
+                                    formControlName="anythingyouwantustoknow">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Moving On*</span>
+                                <input type="date" id="Test_DatetimeLocal" formControlName="movingon">
+                                <div *ngIf="date.errors">
+                                    <b *ngIf="date.touched && date.errors.required"
+                                        style="color:lightcoral">*Required</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <input type="submit" (click)="goBack()" value="Cancel">
+                            <input type="submit" (click)="onSubmit()" value="Submit">
+                            <input type="submit" (click)="onSave()"value="Save">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="left">
+            <div class="container1">
+                <h1 style="text-align: left; font-size: 50px; color: white;">Get a qoute</h1>
+                <br>
+                <p style="font-size: 20px;">To get started please provide a few details about your move-it only takes
+                    couple of minutes</p>
+                <img src="https://drive.google.com/uc?export=view&id=14mm-Qw883arVtq2-D5-s3uNjkufETAFC" alt="Loading">
+            </div>
+        </div>
+    </div>
+
+
+</body>

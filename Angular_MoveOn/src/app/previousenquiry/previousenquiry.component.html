@@ -1,0 +1,32 @@
+<div class="filterbutton">
+  <button (click)="getallData()">&nbsp;&nbsp;All&nbsp;&nbsp;&nbsp;</button>
+  <button (click)="getdomesticData()">&nbsp;&nbsp;Domestic&nbsp;&nbsp;&nbsp;</button>
+  <button (click)="getinternationalData()">International</button>
+</div>
+ 
+<div class="test">
+  <div class="previous" *ngFor="let q of qoute">
+  <div class="card">
+    <div class="cardhead" style="color:black">
+      <h2>{{q.wheredoyouwanttogo}}</h2>
+    </div>
+    <div class="container">
+      <p>Job Number:<span>{{q.applicationnumber}}</span></p>
+        <p>Moving From:<span>{{ q.movingfrom}}</span></p>
+        <p>Moving From Pincode:<span>{{q.movingfrompincode}}</span></p>
+        <p>Moving To:<span> {{q.movingto}}</span></p>
+        <p>Moving To Pincode: <span>{{q.movingtopincode}}</span></p>
+      <p>Moving On:<span> {{q.movingon}}</span></p>
+      <p>Service Quality: <span>{{q.servicequality}}</span></p>      
+      <p>Name:<span>{{q.name}}</span></p>
+      <p>Phone Number:<span> {{q.phonenumber}} </span></p>
+      <p>Email: <span>{{q.emailaddress}}</span></p>
+ 
+ 
+    </div>
+  </div>
+</div>
+ 
+</div>
+ 
+
