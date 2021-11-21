@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "2e5271fe-f18e-4309-8a39-ba3b59b35095",
+		"name": "MoveOn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "allqoute",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8898/allqoute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8898",
+					"path": [
+						"allqoute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "International",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8898/qoute/international",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8898",
+					"path": [
+						"qoute",
+						"international"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Domestic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8898/qoute/domestic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8898",
+					"path": [
+						"qoute",
+						"domestic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertqoute",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Di_ref_id\":\"0\",\r\n\"Moving_from_country\":\"Dubai\",\r\n\"Moving_from_pincode\":\"67678\",\r\n\"Moving_to_country\":\"India\",\r\n\"Moving_to_pincode\":\"8967576\",\r\n\"Moving_date\":\"2021/11/18\",\r\n\"Reason\":\"For Study\",\r\n\"Additional_services\":\"School Search\",\r\n\"Name\":\"Lia\",\r\n\"Email\":\"lia@gmail.com\",\r\n\"Current_address\":\"xxxfffdddd\",\r\n\"Application_number\":\"125\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8898/insertqoute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8898",
+					"path": [
+						"insertqoute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteqoute",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8898/deleteqoute/6196a0093dbaa3c8f0a881a9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8898",
+					"path": [
+						"deleteqoute",
+						"6196a0093dbaa3c8f0a881a9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lastone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8898/lastone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8898",
+					"path": [
+						"lastone"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
